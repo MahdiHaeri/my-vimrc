@@ -1,4 +1,10 @@
 # my-vimrc
+
+<h2> Requirement </h2> 
+https://github.com/VundleVim/Vundle.vim
+
+https://github.com/junegunn/vim-plug
+
 My vimrc configuration 
 
 ```vimrc
@@ -8,8 +14,8 @@ Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jcherven/jummidark.vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'unegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'unegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'jremmen/vim-ripgrep'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -43,6 +49,7 @@ vnoremap c d
 nnoremap x "_x
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
 "set relativenumber
 set number
 set ignorecase
@@ -63,6 +70,24 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+let MY_YCM_HIGHLIGHT_GROUP = {
+      \   'typeParameter': 'PreProc',
+      \   'parameter': 'Normal',
+      \   'variable': 'Normal',
+      \   'property': 'Normal',
+      \   'enumMember': 'Normal',
+      \   'event': 'Special',
+      \   'member': 'Normal',
+      \   'method': 'Normal',
+      \   'class': 'Special',
+      \   'namespace': 'Special',
+      \ }
+
+for tokenType in keys( MY_YCM_HIGHLIGHT_GROUP )
+  call prop_type_add( 'YCM_HL_' . tokenType,
+		    \ { 'highlight': MY_YCM_HIGHLIGHT_GROUP[ tokenType ] } )
+endfor
+
 "-----------------------------------------------------------------
 set nocompatible              " required
 filetype off                  " required
@@ -79,7 +104,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'ycm-core/YouCompleteMe'
 
 " ...
@@ -87,6 +112,4 @@ Plugin 'gmarik/Vundle.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-set encoding=utf-8
 ```
