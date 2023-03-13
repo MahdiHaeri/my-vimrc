@@ -38,6 +38,8 @@ colorscheme OceanicNext
 set encoding=UTF-8
 set guifont=Cousine\ Nerd\ Font,\ Regular
 nmap <F6> :NERDTreeToggle<CR>
+nmap <F5> :MinimapToggle<CR>
+
 map <C-Up> :m -2<CR>
 map <C-k> :m -2<CR>
 map <C-Down> :m +1<CR>
