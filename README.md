@@ -1,11 +1,14 @@
 # my-vimrc
 
-<h2> Requirement </h2> 
+![image](https://user-images.githubusercontent.com/73737391/225133640-871741a3-bc4d-4110-8926-3b223ff629af.png)
+
+<h2> Require Vim Plugin Manager </h2> 
+
+https://github.com/junegunn/vim-plug (It's enough) 
+
 https://github.com/VundleVim/Vundle.vim
 
-https://github.com/junegunn/vim-plug
-
-My vimrc configuration 
+<h2> My vimrc configuration </h2>
 
 ```vimrc
 call plug#begin()
@@ -23,17 +26,13 @@ Plug 'metakirby5/codi.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'wfxr/minimap.vim'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
-
-" Use release branch (recommended)
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Or build from source code by using yarn: https://yarnpkg.com
-"Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+"-----------------------------------------------------------------
 colorscheme OceanicNext
 set encoding=UTF-8
 set guifont=Cousine\ Nerd\ Font,\ Regular
@@ -63,6 +62,7 @@ let g:minimap_auto_start_win_enter = 1
 hi MinimapCurrentLine ctermfg=Green guifg=#50FA7B guibg=#32302f
 let g:minimap_cursor_color = 'MinimapCurrentLine'
 
+"-----------------------------------------------------------------
 
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -71,6 +71,8 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+"-----------------------------------------------------------------
 
 let MY_YCM_HIGHLIGHT_GROUP = {
       \   'typeParameter': 'PreProc',
@@ -91,27 +93,26 @@ for tokenType in keys( MY_YCM_HIGHLIGHT_GROUP )
 endfor
 
 "-----------------------------------------------------------------
-set nocompatible              " required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set nocompatible               required
+"filetype off                   required
+"filetype plugin indent on     required
 
-" alternatively, pass a path where Vundle should install plugins
+ "set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+
+"call vundle#begin()
+ "alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+ "let Vundle manage Vundle, required
+"Plugin 'gmarik/Vundle.vim'
 
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'ycm-core/YouCompleteMe'
+ "add all your plugins here (note older versions of Vundle
+ "used Bundle instead of Plugin)
+"Plugin 'Valloric/YouCompleteMe'
 
-" ...
+"call vundle#end()             required
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+"-----------------------------------------------------------------
 ```
