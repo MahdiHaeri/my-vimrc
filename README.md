@@ -8,6 +8,8 @@ https://github.com/junegunn/vim-plug (It's enough)
 
 https://github.com/VundleVim/Vundle.vim
 
+https://github.com/wfxr/code-minimap
+
 <h2> My vimrc configuration </h2>
 
 ```vimrc
