@@ -38,6 +38,7 @@ call plug#end()
 colorscheme OceanicNext
 set encoding=UTF-8
 set guifont=Cousine\ Nerd\ Font,\ Regular
+set backspace=indent,eol,start
 nmap <F6> :NERDTreeToggle<CR>
 nmap <F5> :MinimapToggle<CR>
 
