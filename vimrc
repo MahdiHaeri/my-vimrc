@@ -5,14 +5,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jcherven/jummidark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'unegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'metakirby5/codi.vim'
-Plug 'preservim/nerdcommenter'
+Plug 'preservim/cnerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'wfxr/minimap.vim'
+Plug 'wfxr/minicmap.vim'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
@@ -101,6 +102,3 @@ endfor
 "Plugin 'Valloric/YouCompleteMe'
 
 "call vundle#end()             required
-
-"-----------------------------------------------------------------
-
